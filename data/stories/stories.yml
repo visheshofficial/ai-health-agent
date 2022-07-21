@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+
+  - story: Health patient
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: healthy_patient
+      - action: utter_healthy_bye
+
+  - story: Unhealthy patient informing symptoms
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: unhealthy_patient
+      - action: gather_symptoms
+      - active_loop: gather_symptoms
+      - slot_was_set:
+          - requested_slot: symptoms
+      - action: utter_ask_symptoms
+      - active_loop: null
+      - action: utter_repeat_information
+
+#  - story: inform symptomps
+#    steps:
+#      - intent: inform_symptoms
+#      - action: action_hello_world
+
+#  - story: print slots
+#    steps:
+#      - intent: print_slots
+#      - action: action_hello_world
+
+
+#  - story: unhealth patient
+#    steps:
+#      - intent: greet
+#      - action: utter_greet
+#      - intent: unhealthy_patient
+#      - action: utter_unhealthy_bye

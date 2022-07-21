@@ -1,1 +1,4 @@
 rasa==3.2.1
+scispacy==0.5.0
+jupyter
+pandas
