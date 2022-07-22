@@ -17,7 +17,7 @@ nlu:
       - I am feeling obnoxious today
       - Not feeling well
 
-   - intent: activate_test_form
+  - intent: activate_test_form
     examples: |
       - I am sick
       - I am not well
