@@ -21,3 +21,33 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: utter_please_rephrase
+
+  - rule: Activate gather_symptoms
+    steps:
+      - intent: unhealthy_patient
+      - action: gather_symptoms
+      - active_loop: gather_symptoms
+
+
+
+  - rule: Submit gather_symptoms
+    condition:
+      - active_loop: gather_symptoms
+    steps:
+      - action: gather_symptoms
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_submit
+      - action: utter_repeat_information
+
+
+
+  - rule: Add symptoms to subject list
+    condition:
+      - active_loop: gather_symptoms
+    steps:
+      - intent: inform_symptoms
+      - action: action_remember_symptoms
+      - action: gather_symptoms
+      - active_loop: gather_symptoms

@@ -1,14 +1,15 @@
 import spacy
 from spacy import displacy
 
-nlp = spacy.load("en_ner_bc5cdr_md")
+nlp = spacy.load("en_ner_bionlp13cg_md")
 text = "I have stomach ache and stomachache. also headache and head ache and headach" \
        "I also have diarrhea and dehydration. I have seen abdominal pain and Muscle weakness, " \
        " debilitation, impaired cognition, drool, pin-point pupils, " \
        " tremor resting, groggy, adverse reaction, adverse effect " \
        " i have neck pain , pain neck , back pain, dizzy spells, shooting pain, hyperemesis, dizziness," \
        " feces in rectum, prodrome, hypoproteinemia"
-text = "i have  Muscle weakness"
+text = "i am feeling dizzy"
+text = "skin irritation around the anus"
 
 # text ="Anemia signs and symptoms vary depending on the cause. If the anemia is caused by a chronic disease, " \
 #       "the disease can mask them, so that the anemia might be detected by tests for another condition., " \

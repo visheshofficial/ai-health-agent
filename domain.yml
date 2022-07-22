@@ -11,7 +11,7 @@ intents:
   - unhealthy_patient
   - bot_challenge
   - inform_symptoms
-  - repeat_symptoms
+
 
 entities:
   - DISEASE
@@ -27,12 +27,9 @@ slots:
 
 forms:
   gather_symptoms:
-    ignored_intents:
-      - greet
-      - healthy_patient
-      - unhealthy_patient
     required_slots:
       - symptoms
+
 
 responses:
   utter_greet:
@@ -56,7 +53,7 @@ responses:
     - text: "You want to tell any other symptom?"
 
   utter_repeat_information:
-    - text: "Here are your symptoms : "
+    - text: "Here are your symptoms : {symptoms}"
 
   utter_iamabot:
     - text: "I am your virtual health agent."
@@ -67,8 +64,12 @@ responses:
   utter_please_rephrase:
     - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
 
+  utter_submit:
+    - text: "Ok. I have collected all the required data"
+
+
 actions:
-  - action_hello_world
+  - action_remember_symptoms
   - utter_greet
   - utter_healthy_bye
   - utter_unhealth_bye

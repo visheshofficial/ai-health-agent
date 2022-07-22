@@ -18,12 +18,18 @@ pipeline:
   - name: LanguageModelFeaturizer
     model_name: bert
     model_weights: "rasa/LaBSE"
+    alias : LanguageModelFeaturizer
   - name: DIETClassifier
     random_seed: 43
     epochs: 200
     learning_rate: 0.001
     use_masked_language_model: True
+    entity_recognition : False
+    constrain_similarities: True
+    featurizers : [LanguageModelFeaturizer]
   - name: ResponseSelector
+    epochs: 100
+    constrain_similarities: true
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
@@ -32,10 +38,10 @@ pipeline:
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy
-  #  - name: UnexpecTEDIntentPolicy
-  #    max_history: 5
-  #    epochs: 100
   - name: TEDPolicy
     max_history: 5
     epochs: 100
     constrain_similarities: true
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100

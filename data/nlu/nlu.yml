@@ -5,35 +5,25 @@ nlu:
     examples: |
       - I feel [stomachache](DISEASE)
       - Seems like I have [anemia](DISEASE)
-      - (DISEASE)
+      - [headache](DISEASE)
       - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
       - I am observing [Chest pain] (DISEASE)
-#      - Experiencing (DISEASE) or (DISEASE)
-#      - I have (DISEASE)
-#      - (DISEASE) and (DISEASE)
-#      - (DISEASE) as well as (DISEASE)
-#  - intent: inform_symptoms
-#    examples: |
-#      - I have [stomachache](symptoms)
-#      - I'm [sneezing all the time](symptoms)?
-#      - My head is hot(symptoms) and I feel [feverish](symptoms)
-#      - I have [constipation](symptoms)
-#      - I am [bleeding](symptoms)
-#      - Seems like I have [Irregular heartbeats](symptoms)
-#      - I have [Dizziness](symptoms)
-#      - [Fatigue](symptoms)
-#      - [Shortness of breath](symptoms)
-#      - [Pale skin] or [yellowish skin](symptoms)
-#      - I am observing [Weight loss](symptoms)
-#      - Experiencing [Numbness] (symptoms) or [tingling] (symptoms) in my hands and feet
-#      - I have [Muscle weakness] (symptoms)
-#      - [Mental confusion](symptoms) and [forgetfulness](symptoms)
 
+  - intent: unhealthy_patient
+    examples: |
+      - I am sick
+      - I am not well
+      - very ill
+      - I am feeling obnoxious today
+      - Not feeling well
 
-  #lookup: symptoms
-  #  examples: |
-  #    - stomach ache
-
+   - intent: activate_test_form
+    examples: |
+      - I am sick
+      - I am not well
+      - very ill
+      - I am feeling obnoxious today
+      - Not feeling well     
 
   - intent: goodbye
     examples: |
@@ -67,13 +57,14 @@ nlu:
       - goodbye.
       - goodnight
       - gotta go
+
   - intent: greet
     examples: |
       - yo
       - good morning
       - hi
       - hey there
-      - hey
+      - hey, 
       - good evening
       - hello
       - Hello?
@@ -114,34 +105,7 @@ nlu:
       - I feel marvellous
       - I am great
 
-  - intent: unhealthy_patient
-    examples: |
-      - I am sick
-      - I am not well
-      - very ill
-#      - I am feeling obnoxious today
-#      - Not feeling well
-#      - I am sad
-#      - I am terrible
-#      - my day was horrible
-#      - I am sad
-#      - I don't feel very well
-#      - super sad
-#      - I'm so sad
-#      - sad
-#      - very sad
-#      - unhappy
-#      - not good
-#      - so saad
-#      - so sad
-#      - I don't feel well
-#      - I am feeling sick
-#      - I am unwell
-#      - very ill
-#      - I think I've caught a bug
-#      - I am not doing too well
-#      - I think I'm getting worse
-#      - i am bad
+
 
   - intent: bot_challenge
     examples: |
@@ -173,25 +137,3 @@ nlu:
       - lhfjdkwhnf
       - a b c d d e f
       - bla bla bla
-#  - intent: print_slots
-#    examples: |
-#      - print slot information
-
-
-#- synonym: bike
-#    examples: |
-#      - bicycle
-#      - mountain bike
-#      - road bike
-#      - folding bike
-
-#- lookup: city
-#    examples: |
-#      - New York
-#      - Chicago
-#      - San Francisco
-#      - Huston
-
-#- regex: help
-#    examples: |
-#      - \bhelp\b

@@ -18,8 +18,12 @@ stories:
       - active_loop: gather_symptoms
       - slot_was_set:
           - requested_slot: symptoms
-      - action: utter_ask_symptoms
+      - slot_was_set:
+          - symptoms: [ 'headache', 'Muscle weakness' ]
+      - slot_was_set:
+          - requested_slot: null
       - active_loop: null
+      - action: utter_submit
       - action: utter_repeat_information
 
 #  - story: inform symptomps
