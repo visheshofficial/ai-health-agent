@@ -8,7 +8,7 @@ text = "I have stomach ache and stomachache. also headache and head ache and hea
        " tremor resting, groggy, adverse reaction, adverse effect " \
        " i have neck pain , pain neck , back pain, dizzy spells, shooting pain, hyperemesis, dizziness," \
        " feces in rectum, prodrome, hypoproteinemia"
-text = "i have  Muscle weakness"
+text = "i have stomachache and headache"
 
 # text ="Anemia signs and symptoms vary depending on the cause. If the anemia is caused by a chronic disease, " \
 #       "the disease can mask them, so that the anemia might be detected by tests for another condition., " \

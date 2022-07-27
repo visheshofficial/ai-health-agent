@@ -8,6 +8,7 @@ nlu:
       - [headache](DISEASE)
       - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
       - I am observing [Chest pain] (DISEASE)
+      - I have signs of [memory loss](DISEASE)
 
   - intent: unhealthy_patient
     examples: |
@@ -16,14 +17,14 @@ nlu:
       - very ill
       - I am feeling obnoxious today
       - Not feeling well
-
-  - intent: activate_test_form
-    examples: |
-      - I am sick
-      - I am not well
-      - very ill
-      - I am feeling obnoxious today
-      - Not feeling well     
+#
+#  - intent: activate_test_form
+#    examples: |
+#      - I am sick
+#      - I am not well
+#      - very ill
+#      - I am feeling obnoxious today
+#      - Not feeling well
 
   - intent: goodbye
     examples: |
@@ -106,7 +107,6 @@ nlu:
       - I am great
 
 
-
   - intent: bot_challenge
     examples: |
       - are you a bot?
@@ -137,3 +137,75 @@ nlu:
       - lhfjdkwhnf
       - a b c d d e f
       - bla bla bla
+
+  - intent: name_entry
+    examples: |
+      - my name is [Binod](name)
+      - my name is [Rajesh](name)
+      - my name is [Priya](name)
+      - myself is [Diana](name)
+      - student name is [Alex](name)
+
+
+  - intent: ssn_entry
+    examples: |
+      - ssn is [12345](ssn)
+      - ssn is [98789](ssn)
+      - ssn is [83756](ssn)
+      - ssn is [29543](ssn)
+      - social security number is [98789](ssn)
+
+  - intent: subject_entry
+    examples: |
+      - subject is [Physics](subject)
+      - subject is [Chemistry](subject)
+      - subject is [Biology](subject)
+      - subject is [Computer science](subject)
+
+  - intent: admission_enquiry
+    examples: |
+      - I want admission in Phd
+      - Phd Admissions
+      - Phd enquiry
+      - admission enquiry for Phd
+      - my name is [Vishesh](name) and wanted admission in Phd
+      - my name is [John](name) and wanted admission in Phd
+      - Phd admission for [Taylor](name)
+
+  - lookup: subject
+    examples: |
+      - Physics
+      - Chemistry
+      - Biology
+      - Computer science
+      - Mathematics
+      - Arts
+      - Management
+
+  - lookup: name
+    examples: |
+      - Vishesh
+      - Alice
+      - Phong
+      - Ratan
+      - Rashmi
+      - Rita
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really

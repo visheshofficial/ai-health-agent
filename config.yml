@@ -24,7 +24,7 @@ pipeline:
     epochs: 200
     learning_rate: 0.001
     use_masked_language_model: True
-    entity_recognition : False
+#    entity_recognition : False
     constrain_similarities: True
     featurizers : [LanguageModelFeaturizer]
   - name: ResponseSelector

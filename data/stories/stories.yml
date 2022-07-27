@@ -17,12 +17,42 @@ stories:
       - action: gather_symptoms
       - active_loop: gather_symptoms
       - slot_was_set:
-          - requested_slot: symptoms
+          - requested_slot: disease
       - slot_was_set:
-          - symptoms: [ 'headache', 'Muscle weakness' ]
+          - disease: 'headache'
       - slot_was_set:
           - requested_slot: null
       - active_loop: null
       - action: utter_submit
       - action: utter_repeat_information
+      - action: action_predict_disease
+
+  - story: admission enquiry flow
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: admission_enquiry
+      - action: admission_form
+      - active_loop: admission_form
+      - slot_was_set:
+          - requested_slot: subject
+      - slot_was_set:
+          - subject: Physics
+      - slot_was_set:
+          - requested_slot: want_to_add_more_subjects
+      - slot_was_set:
+          - want_to_add_more_subjects: True
+      - slot_was_set:
+          - requested_slot: name
+      - slot_was_set:
+          - name: Vishesh
+      - slot_was_set:
+          - requested_slot: ssn
+      - slot_was_set:
+          - ssn: 1234
+      - slot_was_set:
+          - requested_slot: null
+      - active_loop: null
+      - action: utter_submit
+      - action: utter_repeat_information_1
 

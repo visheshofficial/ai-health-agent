@@ -11,25 +11,109 @@ intents:
   - unhealthy_patient
   - bot_challenge
   - inform_symptoms
+  - name_entry
+  - ssn_entry
+  - subject_entry
+  - admission_enquiry
+  - affirm
+  - deny
 
 
 entities:
   - DISEASE
-
+  - subject
+  - want_to_add_more_subjects
+  - name
+  - ssn
 slots:
+  disease:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: DISEASE
+        conditions:
+          - active_loop: gather_symptoms
+            requested_slot: disease
   symptoms:
     type: list
     influence_conversation: false
     mappings:
+      - type: custom
+        action: action_remember_symptoms
+        conditions:
+          - active_loop: gather_symptoms
+            requested_slot: disease
+
+#      - type: from_entity
+#        intent: inform_symptoms
+#        entity: DISEASE
+
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
       - type: from_entity
-        intent: inform_symptoms
-        entity: DISEASE
+        entity: name
+        conditions:
+          - active_loop: admission_form
+            requested_slot: name
+  ssn:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ssn
+        conditions:
+          - active_loop: admission_form
+            requested_slot: ssn
+
+
+  want_to_add_more_subjects:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+        conditions:
+          - active_loop: admission_form
+            requested_slot: want_to_add_more_subjects
+      - type: from_intent
+        intent: deny
+        value: false
+        conditions:
+          - active_loop: admission_form
+            requested_slot: want_to_add_more_subjects
+
+  subject:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: subject
+        conditions:
+          - active_loop: admission_form
+            requested_slot: subject
+
+  subjects:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: custom
+        action: action_remember_subjects
 
 forms:
   gather_symptoms:
     required_slots:
-      - symptoms
+      - disease
 
+  admission_form:
+    required_slots:
+      - subject
+      - want_to_add_more_subjects
+      - name
+      - ssn
 
 responses:
   utter_greet:
@@ -46,7 +130,7 @@ responses:
     - text: "Bye!"
     - text: "Take care!"
 
-  utter_ask_symptoms:
+  utter_ask_disease:
     - text: "Can you please tell me what symptoms you are observing?"
 
   utter_ask_more_symptoms:
@@ -67,6 +151,20 @@ responses:
   utter_submit:
     - text: "Ok. I have collected all the required data"
 
+  utter_ask_name:
+    - text: Please enter your name.
+
+  utter_ask_ssn:
+    - text: Please enter your SSN.
+
+  utter_ask_subject:
+    - text: Please enter the subject to study.
+
+  utter_ask_want_to_add_more_subjects:
+    - text: Do you want to enter more subjects?
+
+  utter_repeat_information_1:
+    - text: Your name is {name}. Your SSN is {ssn}. You want to study {subjects}.
 
 actions:
   - action_remember_symptoms
@@ -75,3 +173,7 @@ actions:
   - utter_unhealth_bye
   - utter_goodbye
   - utter_iamabot
+  - action_remember_subjects
+  - action_predict_disease
+  - utter_ask_want_to_add_more_subjects
+  - action_iterate_for_subjects

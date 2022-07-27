@@ -28,8 +28,6 @@ rules:
       - action: gather_symptoms
       - active_loop: gather_symptoms
 
-
-
   - rule: Submit gather_symptoms
     condition:
       - active_loop: gather_symptoms
@@ -40,10 +38,9 @@ rules:
           - requested_slot: null
       - action: utter_submit
       - action: utter_repeat_information
+      - action: action_predict_disease
 
-
-
-  - rule: Add symptoms to subject list
+  - rule: Add symptom to symptoms list slot
     condition:
       - active_loop: gather_symptoms
     steps:
@@ -51,3 +48,29 @@ rules:
       - action: action_remember_symptoms
       - action: gather_symptoms
       - active_loop: gather_symptoms
+#########################################################
+  - rule: Add subjects to subject list slot
+    condition:
+      - active_loop: admission_form
+    steps:
+      - intent: subject_entry
+      - action: action_remember_subjects
+      - action: admission_form
+      - active_loop: admission_form
+
+  - rule: Activate admission_form
+    steps:
+      - intent: admission_enquiry
+      - action: admission_form
+      - active_loop: admission_form
+
+  - rule: Submit admission_form
+    condition:
+      - active_loop: admission_form
+    steps:
+      - action: admission_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_submit
+      - action: utter_repeat_information_1
