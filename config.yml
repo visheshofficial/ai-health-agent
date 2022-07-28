@@ -22,7 +22,7 @@ pipeline:
   - name: DIETClassifier
     random_seed: 43
     epochs: 200
-    learning_rate: 0.001
+    learning_rate: 0.001 #10 power -6
     use_masked_language_model: True
 #    entity_recognition : False
     constrain_similarities: True

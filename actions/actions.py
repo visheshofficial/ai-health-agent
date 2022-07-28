@@ -44,7 +44,7 @@ class DetectDisease(Action):
         print(str(potential_diseases))
         if potential_diseases:
             dispatcher.utter_message(
-                text="Your symptoms are matching with these diseases:" + str(potential_diseases.keys()))
+                text="Your symptoms are matching with these diseases:" + str("\n".join(list(potential_diseases.keys()))))
         else:
             dispatcher.utter_message(
                 text="I am unable to help you with the information you provided.")

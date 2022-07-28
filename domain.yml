@@ -107,6 +107,7 @@ forms:
   gather_symptoms:
     required_slots:
       - disease
+#      - symptoms
 
   admission_form:
     required_slots:
