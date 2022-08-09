@@ -2,22 +2,22 @@ version: "3.1"
 
 rules:
 
-  - rule: Say goodbye anytime the user says goodbye
+  - rule: Utter goodbye anytime the user says goodbye
     steps:
       - intent: goodbye
       - action: utter_goodbye
 
-  - rule: Say 'I am a bot' anytime the user challenges
+  - rule: Utter bot information anytime user asks about bot
     steps:
       - intent: bot_challenge
       - action: utter_iamabot
 
-  - rule: out-of-scope
+  - rule: Handle out-of-scope intents
     steps:
       - intent: out_of_scope
       - action: utter_out_of_scope
 
-  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  - rule: Ask the user to rephrase the ambiguous text
     steps:
       - intent: nlu_fallback
       - action: utter_please_rephrase
