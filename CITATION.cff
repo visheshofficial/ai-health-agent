@@ -1,0 +1,12 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Conversational AI for Primary Healthcare Support
+  Advice
+message: 'If you refer this repository, please cite my work'
+type: software
+authors:
+  - given-names: Vishesh
+    family-names: Bhagat

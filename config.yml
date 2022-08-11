@@ -1,3 +1,7 @@
+#https://rasa.com/docs/rasa/tuning-your-model/
+# This ois a recommended Rasa pipeline
+
+
 # The config recipe.
 # https://rasa.com/docs/rasa/model-configuration/
 recipe: default.v1
@@ -12,12 +16,14 @@ pipeline:
     case_sensitive: false
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
+    pooling: "mean"
   - name: SpacyEntityExtractor
     dimensions: [ 'DISEASE' ]
   - name: RegexFeaturizer
   - name: LanguageModelFeaturizer
     model_name: bert
-    model_weights: "rasa/LaBSE"
+    model_weights: "bert-base-uncased"
+#    model_weights: "rasa/LaBase"
     alias : LanguageModelFeaturizer
   - name: DIETClassifier
     random_seed: 43
@@ -27,12 +33,9 @@ pipeline:
 #    entity_recognition : False
     constrain_similarities: True
     featurizers : [LanguageModelFeaturizer]
-  - name: ResponseSelector
-    epochs: 100
-    constrain_similarities: true
   - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
+    threshold: 0.6
+    ambiguity_threshold: 0.2
 
 
 policies:

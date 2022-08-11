@@ -1,11 +1,17 @@
 {
-  "greet": {
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "utter_healthy_bye": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1
   },
-  "healthy_patient": {
+  "greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -17,13 +23,7 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "action_listen": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "utter_healthy_bye": {
+  "healthy_patient": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
