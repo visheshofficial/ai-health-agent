@@ -21,9 +21,8 @@ pipeline:
     dimensions: [ 'DISEASE' ]
   - name: RegexFeaturizer
   - name: LanguageModelFeaturizer
-    model_name: bert
-    model_weights: "bert-base-uncased"
-#    model_weights: "rasa/LaBase"
+    model_name: "bert"
+    model_weights: "rasa/LaBSE"
     alias : LanguageModelFeaturizer
   - name: DIETClassifier
     random_seed: 43

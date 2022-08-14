@@ -5,10 +5,24 @@ stories:
           hey
         intent: greet
       - action: utter_greet
+      - action: utter_howareyou
       - user: |
           pretty well!
         intent: healthy_patient
       - action: utter_healthy_bye
+
+  - story: healthy user path test
+    steps:
+      - user: |
+          hey
+        intent: greet
+      - action: utter_greet
+      - action: utter_howareyou
+      - user: |
+          I am extremely energetic today!
+        intent: healthy_patient
+      - action: utter_healthy_bye
+
 
 ##### This file contains tests to evaluate that your bot behaves as expected.
 ##### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant

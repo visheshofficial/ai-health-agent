@@ -1,5 +1,29 @@
 {
+  "utter_howareyou": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "healthy_patient": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
   "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "utter_greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -9,49 +33,31 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 1
-  },
-  "greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "utter_greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "healthy_patient": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "accuracy": 1.0,
-  "macro avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
-  "weighted avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
+    "support": 2
   },
   "micro avg": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
+    "recall": 0.9285714285714286,
+    "f1-score": 0.962962962962963,
+    "support": 14
   },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9444444444444443,
+    "support": 14
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.9523809523809523,
+    "support": 14
+  },
+  "accuracy": 0.9285714285714286,
   "conversation_accuracy": {
-    "accuracy": 1.0,
+    "accuracy": 0.5,
     "correct": 1,
     "with_warnings": 0,
-    "total": 1
+    "total": 2
   }
 }
