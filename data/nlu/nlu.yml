@@ -9,18 +9,23 @@ nlu:
       - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
       - I am observing [Chest pain] (DISEASE)
       - I have signs of [memory loss](DISEASE)
+      - I have extreme [Fatigue] (DISEASE)  
+      - I have [blisters](DISEASE) on my hand
+      - The rash usually appears on your trunk, arms or legs
+      - My joints especially knees and wrists are stiff, [painful](DISEASE) and [inflamed](DISEASE).
+      - I am getting [panic attacks](DISEASE)
+#      -
+#      -
+#      -
+#      -
+#      -
+#      -
+#      -
+#      -
+#      -
+#      -
+#      -
 
-  - intent: unhealthy_patient
-    examples: |
-      - I am sick
-      - I am not well
-      - I am not so good
-      - very ill
-      - Not feeling well
-      - noot feeling good
-      - I am feeling sooo bad today
-      - I am freaking out
-      - it is such a bad day for me
 
   - intent: goodbye
     examples: |
@@ -59,7 +64,31 @@ nlu:
       - gracias
       - muchas gracias
       - great! thanks!
-      
+      - thank you goodbye
+      - okay thank you goodbye
+      - thank you bye
+      - um okay thank you good bye
+      - thank you
+      - and thats all thank you and good bye
+      - okay thank you
+      - thanks
+      - thanks goodbye
+      - thank you and good bye
+      - Thanks!
+      - Awesome, you are a good bot!
+      - great!
+      - I see, thanks
+      - Oh thats good!
+      - thnaks
+      - good job bot
+      - thanks for the help
+      - thanks you
+      - thanks!
+      - thankyou
+      - thnks
+      - thx
+      - thanks for your information
+      - thanks f
 
   - intent: greet
     examples: |
@@ -90,9 +119,14 @@ nlu:
   - intent: healthy_patient
     examples: |
       - I am perfectly fine
+      - I am perfect!
+      - I am pretty well!
+      - I am very active today
       - I am feeling good
       - pretty well
+      - pretty well!
       - great
+      - very happy!
       - very happy
       - I am good
       - I'm ok
@@ -107,7 +141,23 @@ nlu:
       - I'm fine
       - I feel marvellous
       - I am great
+      - The best i can be
+      - i am so great today
 
+  - intent: unhealthy_patient
+    examples: |
+      - I am sick
+      - I am not well
+      - I am not so good
+      - very ill
+      - Not feeling well
+      - noot feeling good
+      - I am feeling sooo bad today
+      - I am freaking out
+      - it is such a bad day for me
+      - i am very sad
+      - i am dead
+      - I'm dead
 
   - intent: bot_challenge
     examples: |
@@ -143,23 +193,27 @@ nlu:
       - a b c d d e f
       - bla bla bla
       - Do you know how to dance?
-
-
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
+      - what is the square root of 5
+      - I want to know the weather
+      - what is the meaning of life.
+      - Fridge Isn't Running
+      - my tv isn't working
+      - I want a pizza
+      - my washing machine isn't working
+      - what year is it
+      - order a pizza
+      - I want to order a pizza
+      - what is the weather today
+      - what is the weather
+      - what the weather today ?
+      - hows the weather
+      - tell me a joke
+      - Can I get a hamburger?
+      - Can YouTube talk?
+      - Can you call me back ?
+      - Can you give me your datacenter's password
+      - Can you give me your datacenter's password?
+      - Can you make sandwiches?
+      - Can you please send me an uber
+      - ofif fsdfafsfs
+      - ewfn rwtot43uf 345653tf 314efyj f ewu

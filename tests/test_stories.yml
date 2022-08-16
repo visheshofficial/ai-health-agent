@@ -1,5 +1,5 @@
 stories:
-  - story: healthy user path test
+  - story: healthy user path test 1
     steps:
       - user: |
           hey
@@ -11,10 +11,10 @@ stories:
         intent: healthy_patient
       - action: utter_healthy_bye
 
-  - story: healthy user path test
+  - story: healthy user path test 2
     steps:
       - user: |
-          hey
+          hii
         intent: greet
       - action: utter_greet
       - action: utter_howareyou
@@ -22,96 +22,51 @@ stories:
           I am extremely energetic today!
         intent: healthy_patient
       - action: utter_healthy_bye
+      - user: |
+          bye
+        intent: goodbye
+      - action: utter_goodbye
 
+  - story: Unhealthy Patient Discussion 1
+    steps:
+      - user: |
+          hello there
+        intent: greet
+      - action: utter_greet
+      - action: utter_howareyou
+      - user: |
+          I am not feeling well today
+        intent: unhealthy_patient
+      - action: gather_symptoms
+      - active_loop: gather_symptoms
+      - user: |
+          I have [fever](DISEASE), [fatigue](DISEASE) and [blurred vision](DISEASE)
+        intent: inform_symptoms
+      - action: action_remember_symptoms
+      - action: gather_symptoms
+      - active_loop: null
+      - action: utter_submit
+      - action: action_repeat_information
+      - action: action_predict_disease
 
-##### This file contains tests to evaluate that your bot behaves as expected.
-##### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-#
-#stories:
-#- story: happy path 1
-#  steps:
-#  - user: |
-#      hello there!
-#    intent: greet
-#  - action: utter_greet
-#  - user: |
-#      amazing
-#    intent: mood_great
-#  - action: utter_happy
-#
-#- story: happy path 2
-#  steps:
-#  - user: |
-#      hello there!
-#    intent: greet
-#  - action: utter_greet
-#  - user: |
-#      amazing
-#    intent: mood_great
-#  - action: utter_happy
-#  - user: |
-#      bye-bye!
-#    intent: goodbye
-#  - action: utter_goodbye
-#
-#- story: sad path 1
-#  steps:
-#  - user: |
-#      hello
-#    intent: greet
-#  - action: utter_greet
-#  - user: |
-#      not good
-#    intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - user: |
-#      yes
-#    intent: affirm
-#  - action: utter_happy
-#
-#- story: sad path 2
-#  steps:
-#  - user: |
-#      hello
-#    intent: greet
-#  - action: utter_greet
-#  - user: |
-#      not good
-#    intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - user: |
-#      not really
-#    intent: deny
-#  - action: utter_goodbye
-#
-#- story: sad path 3
-#  steps:
-#  - user: |
-#      hi
-#    intent: greet
-#  - action: utter_greet
-#  - user: |
-#      very terrible
-#    intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - user: |
-#      no
-#    intent: deny
-#  - action: utter_goodbye
-#
-#- story: say goodbye
-#  steps:
-#  - user: |
-#      bye-bye!
-#    intent: goodbye
-#  - action: utter_goodbye
-#
-#- story: bot challenge
-#  steps:
-#  - user: |
-#      are you a bot?
-#    intent: bot_challenge
-#  - action: utter_iamabot
+  - story: Unhealthy Patient Discussion 2
+    steps:
+      - user: |
+          hello there
+        intent: greet
+      - action: utter_greet
+      - action: utter_howareyou
+      - user: |
+          I am not feeling well today
+        intent: unhealthy_patient
+      - action: gather_symptoms
+      - active_loop: gather_symptoms
+      - user: |
+          I have [fever](DISEASE), [fatigue](DISEASE) and [blurred vision](DISEASE)
+        intent: inform_symptoms
+      - action: action_remember_symptoms
+      - action: gather_symptoms
+      - active_loop: null
+      - action: utter_submit
+      - action: action_repeat_information
+      - action: action_predict_disease

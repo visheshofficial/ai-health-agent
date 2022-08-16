@@ -11,9 +11,6 @@ intents:
   - unhealthy_patient
   - bot_challenge
   - inform_symptoms
-  - affirm
-  - deny
-
 
 entities:
   - DISEASE
@@ -46,7 +43,7 @@ forms:
 
 responses:
   utter_intro:
-    - text: "I am a Health Agent and your virtual health guide. \n\n I try to match disease with the symptoms that you tell me."
+    - text: "I am a Health Agent and your virtual health guide. \n\nI try to match disease with the symptoms that you tell me."
 
   utter_greet:
     - text: "Hello there!"
@@ -94,7 +91,5 @@ actions:
   - utter_healthy_bye
   - utter_unhealth_bye
   - utter_goodbye
-  - utter_iamabot
-  - utter_repeat_information
   - action_predict_disease
   - action_repeat_information
