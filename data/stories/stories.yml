@@ -28,3 +28,4 @@ stories:
       - action: utter_submit
       - action: action_repeat_information
       - action: action_predict_disease
+      - action: utter_unhealth_bye

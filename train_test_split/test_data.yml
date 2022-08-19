@@ -1,0 +1,53 @@
+version: "3.1"
+nlu:
+- intent: inform_symptoms
+  examples: |
+    - Seems like I have [anemia](DISEASE)
+    - I feel [stomachache](DISEASE)
+    - I have signs of [memory loss](DISEASE)
+- intent: unhealthy_patient
+  examples: |
+    - noot feeling good
+    - Not feeling well
+- intent: bot_challenge
+  examples: |
+    - are you virtual?
+    - are you an ai?
+    - are you artificial
+    - are you real?
+- intent: greet
+  examples: |
+    - hey there
+    - hello its ella
+    - hi
+    - hey,
+    - Hey
+- intent: healthy_patient
+  examples: |
+    - pretty well!
+    - I am good
+    - Couldn't be better
+    - I am perfectly fine
+    - I'm fine
+- intent: out_of_scope
+  examples: |
+    - I want a pizza
+    - Can I get a hamburger?
+    - What is 2 + 2?
+    - Do you know how to dance?
+    - I want to know the weather
+    - Fridge Isn't Running
+- intent: goodbye
+  examples: |
+    - Thanks!
+    - BYEE
+    - thanks f
+    - thank you and good bye
+    - Oh thats good!
+    - I see, thanks
+    - goodbye.
+    - GOODBYE
+    - Awesome, you are a good bot!
+    - thanks for your information
+    - bye for now
+    - muchas gracias

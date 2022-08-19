@@ -1,0 +1,77 @@
+[
+  {
+    "text": "I have signs of memory loss",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "memory loss",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "DISEASE",
+        "start": 16,
+        "end": 22,
+        "confidence_entity": 0.7464975714683533,
+        "value": "memory",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have symptoms of memory loss",
+    "entities": [
+      {
+        "start": 19,
+        "end": 30,
+        "value": "memory loss",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "DISEASE",
+        "start": 19,
+        "end": 25,
+        "confidence_entity": 0.7026033997535706,
+        "value": "memory",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have blisters on my hand",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "blisters",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I am getting panic attacks",
+    "entities": [
+      {
+        "start": 13,
+        "end": 26,
+        "value": "panic attacks",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "DISEASE",
+        "start": 13,
+        "end": 18,
+        "confidence_entity": 0.6813417077064514,
+        "value": "panic",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

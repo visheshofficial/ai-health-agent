@@ -1,0 +1,234 @@
+[
+  {
+    "text": "cya",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.41770416498184204
+    }
+  },
+  {
+    "text": "Awesome, you are a good bot!",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6412028670310974
+    }
+  },
+  {
+    "text": "great!",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.998670220375061
+    }
+  },
+  {
+    "text": "Oh thats good!",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.9919682145118713
+    }
+  },
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9978243112564087
+    }
+  },
+  {
+    "text": "I am very active today",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "unhealthy_patient",
+      "confidence": 0.4265318512916565
+    }
+  },
+  {
+    "text": "it is a good day for me",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "unhealthy_patient",
+      "confidence": 0.9095694422721863
+    }
+  },
+  {
+    "text": "Not bad",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "unhealthy_patient",
+      "confidence": 0.9402114748954773
+    }
+  },
+  {
+    "text": "I am much better now, thank you",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9822178483009338
+    }
+  },
+  {
+    "text": "I am sick",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "inform_symptoms",
+      "confidence": 0.5190972089767456
+    }
+  },
+  {
+    "text": "I am freaking out",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.5909976959228516
+    }
+  },
+  {
+    "text": "i am dead",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.24371109902858734
+    }
+  },
+  {
+    "text": "I'm dead",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.25293901562690735
+    }
+  },
+  {
+    "text": "Do you know how to dance?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.7798884510993958
+    }
+  },
+  {
+    "text": "my tv isn't working",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "unhealthy_patient",
+      "confidence": 0.582993745803833
+    }
+  },
+  {
+    "text": "ciao",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.998514711856842
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9949787259101868
+    }
+  },
+  {
+    "text": "goodnight",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9938035011291504
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7968137860298157
+    }
+  },
+  {
+    "text": "welcome",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6879862546920776
+    }
+  },
+  {
+    "text": "pretty well!",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9406718015670776
+    }
+  },
+  {
+    "text": "great",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5840842723846436
+    }
+  },
+  {
+    "text": "very happy!",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9977931976318359
+    }
+  },
+  {
+    "text": "very happy",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9028046727180481
+    }
+  },
+  {
+    "text": "Fit as a fiddle",
+    "intent": "healthy_patient",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5966736674308777
+    }
+  },
+  {
+    "text": "noot feeling good",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.8768584132194519
+    }
+  },
+  {
+    "text": "I am feeling sooo bad today",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.9243459701538086
+    }
+  },
+  {
+    "text": "it is such a bad day for me",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.8351259231567383
+    }
+  },
+  {
+    "text": "bla bla bla",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.99664705991745
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "text": "I have fever, fatigue and blurred vision",
+    "entities": [
+      {
+        "start": 7,
+        "end": 12,
+        "value": "fever",
+        "entity": "DISEASE"
+      },
+      {
+        "start": 14,
+        "end": 21,
+        "value": "fatigue",
+        "entity": "DISEASE"
+      },
+      {
+        "start": 26,
+        "end": 40,
+        "value": "blurred vision",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

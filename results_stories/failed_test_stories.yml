@@ -1,0 +1,22 @@
+version: "3.1"
+stories:
+- story: Unhealthy patient informing symptoms (data\stories\stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_howareyou
+  - intent: unhealthy_patient
+  - action: gather_symptoms
+  - active_loop: gather_symptoms
+  - slot_was_set:
+    - requested_slot: disease
+  - slot_was_set:
+    - disease: headache
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: action_repeat_information
+  - action: action_predict_disease
+  - action: utter_unhealth_bye  # predicted: action_listen
+  - action: action_listen  # predicted: action_default_fallback

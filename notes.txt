@@ -1,0 +1,8 @@
+AI : Artificial Intelligence
+
+
+#    model_weights: "bert-large-uncased"
+#    model_weights: "bert-base-uncased"
+
+https://github.com/heyunh2015/diseaseBERT
+

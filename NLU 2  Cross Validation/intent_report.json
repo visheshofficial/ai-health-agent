@@ -1,0 +1,84 @@
+{
+  "greet": {
+    "precision": 0.8695652173913043,
+    "recall": 0.8695652173913043,
+    "f1-score": 0.8695652173913043,
+    "support": 23,
+    "confused_with": {
+      "goodbye": 3
+    }
+  },
+  "goodbye": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8771929824561403,
+    "f1-score": 0.8547008547008548,
+    "support": 57,
+    "confused_with": {
+      "healthy_patient": 3,
+      "greet": 3
+    }
+  },
+  "inform_symptoms": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 0.9655172413793104,
+    "recall": 0.9032258064516129,
+    "f1-score": 0.9333333333333333,
+    "support": 31,
+    "confused_with": {
+      "unhealthy_patient": 1,
+      "goodbye": 1
+    }
+  },
+  "unhealthy_patient": {
+    "precision": 0.5555555555555556,
+    "recall": 0.4166666666666667,
+    "f1-score": 0.4761904761904762,
+    "support": 12,
+    "confused_with": {
+      "healthy_patient": 5,
+      "inform_symptoms": 1
+    }
+  },
+  "bot_challenge": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 22,
+    "confused_with": {}
+  },
+  "healthy_patient": {
+    "precision": 0.6666666666666666,
+    "recall": 0.64,
+    "f1-score": 0.6530612244897959,
+    "support": 25,
+    "confused_with": {
+      "goodbye": 5,
+      "unhealthy_patient": 3
+    }
+  },
+  "accuracy": 0.8397790055248618,
+  "macro avg": {
+    "precision": 0.8177101925227863,
+    "recall": 0.8152358104236749,
+    "f1-score": 0.8142706549095191,
+    "support": 181
+  },
+  "weighted avg": {
+    "precision": 0.8343335238458118,
+    "recall": 0.8397790055248618,
+    "f1-score": 0.8356757777299284,
+    "support": 181
+  },
+  "micro avg": {
+    "precision": 0.8397790055248618,
+    "recall": 0.8397790055248618,
+    "f1-score": 0.8397790055248618,
+    "support": 181
+  }
+}

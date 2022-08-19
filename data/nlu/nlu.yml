@@ -9,6 +9,7 @@ nlu:
       - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
       - I am observing [Chest pain] (DISEASE)
       - I have signs of [memory loss](DISEASE)
+      - I have symptoms of [memory loss](DISEASE)
       - I have extreme [Fatigue] (DISEASE)  
       - I have [blisters](DISEASE) on my hand
       - The rash usually appears on your trunk, arms or legs
