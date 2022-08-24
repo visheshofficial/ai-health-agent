@@ -11,6 +11,7 @@ intents:
   - unhealthy_patient
   - bot_challenge
   - inform_symptoms
+  - out_of_scope
 
 entities:
   - DISEASE
