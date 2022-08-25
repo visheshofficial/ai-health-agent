@@ -48,25 +48,26 @@ stories:
       - action: utter_submit
       - action: action_repeat_information
       - action: action_predict_disease
+      - action: utter_unhealth_bye
 
-  - story: Unhealthy Patient Discussion 2
-    steps:
-      - user: |
-          hello there
-        intent: greet
-      - action: utter_greet
-      - action: utter_howareyou
-      - user: |
-          I am not feeling well today
-        intent: unhealthy_patient
-      - action: gather_symptoms
-      - active_loop: gather_symptoms
-      - user: |
-          I have [fever](DISEASE), [fatigue](DISEASE) and [blurred vision](DISEASE)
-        intent: inform_symptoms
-      - action: action_remember_symptoms
-      - action: gather_symptoms
-      - active_loop: null
-      - action: utter_submit
-      - action: action_repeat_information
-      - action: action_predict_disease
+#  - story: Unhealthy Patient Discussion 2
+#    steps:
+#      - user: |
+#          hello there
+#        intent: greet
+#      - action: utter_greet
+#      - action: utter_howareyou
+#      - user: |
+#          I am not feeling well today
+#        intent: unhealthy_patient
+#      - action: gather_symptoms
+#      - active_loop: gather_symptoms
+#      - user: |
+#          I have [fever](DISEASE), [fatigue](DISEASE) and [blurred vision](DISEASE)
+#        intent: inform_symptoms
+#      - action: action_remember_symptoms
+#      - action: gather_symptoms
+#      - active_loop: null
+#      - action: utter_submit
+#      - action: action_repeat_information
+#      - action: action_predict_disease

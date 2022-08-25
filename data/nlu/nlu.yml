@@ -4,28 +4,42 @@ nlu:
   - intent: inform_symptoms
     examples: |
       - I feel [stomachache](DISEASE)
+      - I have [stomachache](DISEASE)
       - Seems like I have [anemia](DISEASE)
+      - It appears like I have [anemia](DISEASE)
       - [headache](DISEASE)
       - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
       - I am observing [Chest pain] (DISEASE)
+      - I am feeling [Chest pain] (DISEASE)
+      - I am [restless] (DISEASE)
+      - I am feeling [restless] (DISEASE)
+      - I get [restless] (DISEASE)
       - I have signs of [memory loss](DISEASE)
       - I have symptoms of [memory loss](DISEASE)
       - I have extreme [Fatigue] (DISEASE)  
       - I have [blisters](DISEASE) on my hand
       - The rash usually appears on your trunk, arms or legs
-      - My joints especially knees and wrists are stiff, [painful](DISEASE) and [inflamed](DISEASE).
+      - My joints especially knees and wrists are [painful](DISEASE) and [inflamed](DISEASE).
       - I am getting [panic attacks](DISEASE)
-#      -
-#      -
-#      -
-#      -
-#      -
-#      -
-#      -
-#      -
-#      -
-#      -
-#      -
+      - I am getting [panic attacks](DISEASE)
+      - My skin have [itch](DISEASE)
+      - I have severe [pain](DISEASE) and [swelling](DISEASE) near the heel
+      - I am a patient of [diabetes](DISEASE)
+      - I am suffering with have prolonged heavy [bleeding](DISEASE)
+      - Looks like I have [hair loss](DISEASE)
+      - My skin has [rash](DISEASE)
+      - I am [allergic](DISEASE) to insect stings and it causes me to go into [shock](DISEASE)
+      - I am struggling with long term management of [anaphylaxis](DISEASE)
+      - I have [stuffy nose](DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
+#      - (DISEASE)
 
 
   - intent: goodbye

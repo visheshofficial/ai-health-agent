@@ -2,13 +2,8 @@ import spacy
 from spacy import displacy
 
 nlp = spacy.load("en_ner_bc5cdr_md")
-text = "I have stomach ache and stomachache. also headache and head ache and headach" \
-       "I also have diarrhea and dehydration. I have seen abdominal pain and Muscle weakness, " \
-       " debilitation, impaired cognition, drool, pin-point pupils, " \
-       " tremor resting, groggy, adverse reaction, adverse effect " \
-       " i have neck pain , pain neck , back pain, dizzy spells, shooting pain, hyperemesis, dizziness," \
-       " feces in rectum, prodrome, hypoproteinemia"
-text = "i have stomachache and headache"
+text = "Skin changes are the only signs of acanthosis nigricans. Youll notice dark thickened velvety skin in body folds and creases  typically in your armpits groin and back of the neck. The skin changes usually appear slowly. The affected skin may also have an odor or itch. Consult your doctor if you notice changes in your skin  especially if the changes appear suddenly. You may have an underlying condition that needs treatment."
+
 
 # text ="Anemia signs and symptoms vary depending on the cause. If the anemia is caused by a chronic disease, " \
 #       "the disease can mask them, so that the anemia might be detected by tests for another condition., " \
