@@ -3,24 +3,28 @@ version: "3.1"
 nlu:
   - intent: inform_symptoms
     examples: |
-      - I feel [stomachache](DISEASE)
-      - I have [stomachache](DISEASE)
+      - It looks like I have [stomachache](DISEASE)
+      - I feel [dizziness](DISEASE)
+      - I have [headache](DISEASE)
       - Seems like I have [anemia](DISEASE)
       - It appears like I have [anemia](DISEASE)
       - [headache](DISEASE)
       - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
       - I am observing [Chest pain] (DISEASE)
       - I am feeling [Chest pain] (DISEASE)
-      - I am [restless] (DISEASE)
+      - I am getting [Pain cramp] (DISEASE)
       - I am feeling [restless] (DISEASE)
-      - I get [restless] (DISEASE)
+      - I get [panic attacks] (DISEASE)
       - I have signs of [memory loss](DISEASE)
-      - I have symptoms of [memory loss](DISEASE)
+      - I am observing signs of [memory loss](DISEASE)
+      - I have symptoms of [throat infection](DISEASE)
+      - I am observing symptoms of [Cough Congestion](DISEASE)
+      - My symptoms are [Cough Congestion](DISEASE) and [watery eyes](DISEASE)
+      - Looks like I have symptoms of  [vomiting](DISEASE) 
       - I have extreme [Fatigue] (DISEASE)  
       - I have [blisters](DISEASE) on my hand
-      - The rash usually appears on your trunk, arms or legs
+      - The [rash](DISEASE) usually appears on my trunk, arms or legs
       - My joints especially knees and wrists are [painful](DISEASE) and [inflamed](DISEASE).
-      - I am getting [panic attacks](DISEASE)
       - I am getting [panic attacks](DISEASE)
       - My skin have [itch](DISEASE)
       - I have severe [pain](DISEASE) and [swelling](DISEASE) near the heel
@@ -31,16 +35,13 @@ nlu:
       - I am [allergic](DISEASE) to insect stings and it causes me to go into [shock](DISEASE)
       - I am struggling with long term management of [anaphylaxis](DISEASE)
       - I have [stuffy nose](DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
-#      - (DISEASE)
+      - I have a constant [pain](DISEASE) in my back
+      - I feel a new [breast lumps](DISEASE) that persist after a menstrual period
+      - A [pain](DISEASE) in my ankle that grows with activities
+      - [Skin flushing](DISEASE) and [shortness of breath](DISEASE)
+      - I feel i am having [dehydration](DISEASE)
 
+#/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
 
   - intent: goodbye
     examples: |
@@ -103,7 +104,9 @@ nlu:
       - thnks
       - thx
       - thanks for your information
-      - thanks f
+      - thankss
+
+#/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
 
   - intent: greet
     examples: |
@@ -171,8 +174,16 @@ nlu:
       - I am freaking out
       - it is such a bad day for me
       - i am very sad
-      - i am dead
-      - I'm dead
+      - i am extremely sick
+      - I am suffering today
+      - I am bad
+      - sad
+      - sick
+      - ill
+      - poor
+      - I am miserable
+
+#/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
 
   - intent: bot_challenge
     examples: |
@@ -199,6 +210,8 @@ nlu:
       - what you do?
       - how can you help?
 
+#/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
+
   - intent: out_of_scope
     examples: |
       - I want to order food
@@ -216,10 +229,9 @@ nlu:
       - I want a pizza
       - my washing machine isn't working
       - what year is it
-      - order a pizza
+      - order a banana
       - I want to order a pizza
       - what is the weather today
-      - what is the weather
       - what the weather today ?
       - hows the weather
       - tell me a joke

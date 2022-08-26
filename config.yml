@@ -26,12 +26,14 @@ pipeline:
     alias : LanguageModelFeaturizer
   - name: DIETClassifier
     random_seed: 43
-    epochs: 200
+    epochs: 120
     learning_rate: 0.001 #10 power -6
     use_masked_language_model: True
-#    entity_recognition : False
     constrain_similarities: True
+    tensorboard_log_directory: "./tensorboard"
+    tensorboard_log_level: "epoch"
     featurizers : [LanguageModelFeaturizer]
+#    entity_recognition : False
   - name: FallbackClassifier
     threshold: 0.6
     ambiguity_threshold: 0.2
@@ -44,6 +46,8 @@ policies:
     max_history: 5
     epochs: 100
     constrain_similarities: true
+    tensorboard_log_directory: "./tensorboard"
+    tensorboard_log_level: "epoch"
 #  - name: UnexpecTEDIntentPolicy
 #    max_history: 5
 #    epochs: 100
