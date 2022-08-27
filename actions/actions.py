@@ -5,6 +5,9 @@ from rasa_sdk.executor import CollectingDispatcher
 
 
 class RepeatInformation(Action):
+    '''
+    Custom action to repeat information to the user
+    '''
     def name(self) -> Text:
         return "action_repeat_information"
 
@@ -23,6 +26,9 @@ class RepeatInformation(Action):
 
 
 class RememberSymptoms(Action):
+    '''
+    Custom action for symptoms slot filling
+    '''
 
     def name(self) -> Text:
         return "action_remember_symptoms"
@@ -48,6 +54,9 @@ class RememberSymptoms(Action):
 
 
 class DetectDisease(Action):
+    '''
+    Custom action for calling get_matching_diseases service
+    '''
     def name(self) -> Text:
         return "action_predict_disease"
 
@@ -94,8 +103,8 @@ def string_to_list(input_string: str):
 def filter_fn(row, symptoms):
     """
     Filters pandas rows that contains symptoms
-    :param row:
-    :param symptoms:
+    :param row: pandas row
+    :param symptoms: symptom list
     :return:
     """
     count = 0
@@ -106,6 +115,11 @@ def filter_fn(row, symptoms):
 
 
 def get_matching_diseases(symptom_list):
+    '''
+
+    :param symptom_list: list of symptoms
+    :return: dictionary of disease name and score
+    '''
     print("inside get_matching_diseases")
     import os
     # to get the current working directory

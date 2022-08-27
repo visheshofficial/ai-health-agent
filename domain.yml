@@ -72,9 +72,6 @@ responses:
   utter_ask_disease:
     - text: "Can you please tell me what symptoms you are observing?"
 
-#  utter_ask_more_symptoms:
-#    - text: "You want to tell any other symptom?"
-
   utter_out_of_scope:
     - text: "Sorry, I can't handle that request."
 

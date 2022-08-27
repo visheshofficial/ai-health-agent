@@ -1,13 +1,5 @@
-#https://rasa.com/docs/rasa/tuning-your-model/
-# This ois a recommended Rasa pipeline
-
-
-# The config recipe.
-# https://rasa.com/docs/rasa/model-configuration/
 recipe: default.v1
 
-# Configuration for Rasa NLU.
-# https://rasa.com/docs/rasa/nlu/components/
 language: en
 
 pipeline:
@@ -27,7 +19,7 @@ pipeline:
   - name: DIETClassifier
     random_seed: 43
     epochs: 120
-    learning_rate: 0.001 #10 power -6
+    learning_rate: 0.001
     use_masked_language_model: True
     constrain_similarities: True
     tensorboard_log_directory: "./tensorboard"

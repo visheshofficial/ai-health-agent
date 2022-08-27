@@ -4,6 +4,7 @@
 pip install rasa
 pip install "rasa[transformers]"
 pip install scispacy
+pip install pandas
 pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.0/en_ner_bc5cdr_md-0.5.0.tar.gz
 
 ### Rasa server
@@ -38,11 +39,3 @@ This will start an HTTP-based server in the local 8000 port. We can visit http:/
 rasa data validate
 
 
-
-https://github.com/botfront/rasa-webchat
-https://elysian01.github.io/Rasa-Chatbot-UI/#themes-and-upgrades
-
-
-what 
-why
-how
