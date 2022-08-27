@@ -1,0 +1,28 @@
+{
+  "DISEASE": {
+    "precision": 1.0,
+    "recall": 0.9512195121951219,
+    "f1-score": 0.975,
+    "support": 41,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.9512195121951219,
+    "f1-score": 0.975,
+    "support": 41
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.9512195121951219,
+    "f1-score": 0.975,
+    "support": 41
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.9512195121951219,
+    "f1-score": 0.9750000000000001,
+    "support": 41
+  },
+  "accuracy": 0.9971870604781997
+}

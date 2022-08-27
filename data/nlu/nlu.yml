@@ -1,432 +1,187 @@
 version: "3.1"
 nlu:
-- intent: unhealthy_patient
-  examples: |
-    - I am freaking out
-    - I am not well
-    - I am bad
-    - it is such a bad day for me
-    - I am suffering today
-    - poor
-    - I am not so good
-    - I am miserable
-    - very ill
-    - I am sick
-    - noot feeling good
-    - I am feeling sooo bad today
-    - i am extremely sick
-    - ill
-- intent: bot_challenge
-  examples: |
-    - are you really a bot
-    - are you ai
-    - are you artificial
-    - what you do?
-    - are you real?
-    - are you a chatbot
-    - are you a human or a bot?
-    - are you sure that you're a bot?
-    - are you an ai?
-    - are you virtual?
-    - how can you help?
-    - are you artificial intelligence
-    - are you a robot
-    - are you a real bot?
-    - aren't you a bot
-    - are you a bot?
-    - am i speaking to an ai?
-    - are you real
-- intent: greet
-  examples: |
-    - Hey
-    - Hello?
-    - hello its ella
-    - welcome
-    - Hi
-    - hello there
-    - HI
-    - hello are you still there
-    - hi!
-    - hi
-    - howdy
-    - yo
-    - hallo
-    - Hola.
-    - hey there
-    - HEY
-    - good evening
-    - good day
-- intent: healthy_patient
-  examples: |
-    - I am feeling good
-    - Fit as a fiddle
-    - I am good
-    - very happy
-    - I am great
-    - great
-    - Couldn't be better
-    - I am perfect!
-    - Not bad
-    - it is a good day for me
-    - I am much better now, thank you
-    - The best i can be
-    - I'm ok
-    - I am alright
-    - I am feeling fantastic
-    - I am awesome
-    - I am pretty well!
-    - I am very active today
-    - I feel marvellous
-    - pretty well
-- intent: out_of_scope
-  examples: |
-    - Can YouTube talk?
-    - what the weather today ?
-    - Do you know how to dance?
-    - Can you give me your datacenter's password
-    - what is the square root of 5
-    - Who's the US President?
-    - what is the weather today
-    - What is 2 + 2?
-    - bla bla bla
-    - I want to know the weather
-    - what year is it
-    - Fridge Isn't Running
-    - Can I get a hamburger?
-    - what is the meaning of life.
-    - I want to order food
-    - my tv isn't working
-    - Can you give me your datacenter's password?
-    - Can you call me back ?
-    - order a banana
-    - Can you make sandwiches?
-    - tell me a joke
-    - hows the weather
-    - lhfjdkwhnf
-    - I want a pizza
-- intent: inform_symptoms
-  examples: |
-    - I am suffering with have prolonged heavy [bleeding](DISEASE)
-    - I am observing signs of [memory loss](DISEASE)
-    - It appears like I have [anemia](DISEASE)
-    - Looks like I have symptoms of  [vomiting](DISEASE)
-    - I am a patient of [diabetes](DISEASE)
-    - My symptoms are [Cough Congestion](DISEASE) and [watery eyes](DISEASE)
-    - I am struggling with long term management of [anaphylaxis](DISEASE)
-    - I have [stuffy nose](DISEASE)
-    - I have a constant [pain](DISEASE) in my back
-    - I get [panic attacks] (DISEASE)
-    - I feel a new [breast lumps](DISEASE) that persist after a menstrual period
-    - I have severe [pain](DISEASE) and [swelling](DISEASE) near the heel
-    - I feel [dizziness](DISEASE)
-    - My skin has [rash](DISEASE)
-    - A [pain](DISEASE) in my ankle that grows with activities
-    - I have signs of [memory loss](DISEASE)
-    - I am observing [Chest pain] (DISEASE)
-    - It looks like I have [stomachache](DISEASE)
-    - I am getting [panic attacks](DISEASE)
-    - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
-    - Looks like I have [hair loss](DISEASE)
-    - Seems like I have [anemia](DISEASE)
-    - I am feeling [Chest pain] (DISEASE)
-    - I am getting [Pain cramp] (DISEASE)
-    - I am observing symptoms of [Cough Congestion](DISEASE)
-    - My skin have [itch](DISEASE)
-    - The [rash](DISEASE) usually appears on my trunk, arms or legs
-    - [headache](DISEASE)
-    - I have [headache](DISEASE)
-    - I have symptoms of [throat infection](DISEASE)
-- intent: goodbye
-  examples: |
-    - thanks you
-    - thank you goodbye
-    - and thats all thank you and good bye
-    - thx
-    - Awesome, you are a good bot!
-    - okay thank you
-    - good night
-    - thankyou
-    - thanks goodbye
-    - bye bye
-    - bye!
-    - thank you and good bye
-    - bye udo
-    - gotta go
-    - ok i gtg
-    - thank you
-    - bye
-    - thanks for your information
-    - Oh thats good!
-    - muchas gracias
-    - okay thank you goodbye
-    - thnks
-    - byee
-    - catch you later
-    - good job bot
-    - Adios
-    - ciao
-    - thnaks
-    - thankss
-    - great! thanks!
-    - have a good day. time to go, bye
-    - bye for now
-    - thanks
-    - farewell
-    - thanks!
-    - Thanks!
-    - thank you bye
-    - goodbye
-    - gracias
-    - i'm done
-    - good bye
-    - cya
-    - goodnight
-    - great!
-    - um okay thank you good bye
-
-#version: "3.1"
-#
-#nlu:
-#  - intent: inform_symptoms
-#    examples: |
-#      - It looks like I have [stomachache](DISEASE)
-#      - I feel [dizziness](DISEASE)
-#      - I have [headache](DISEASE)
-#      - Seems like I have [anemia](DISEASE)
-#      - It appears like I have [anemia](DISEASE)
-#      - [headache](DISEASE)
-#      - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
-#      - I am observing [Chest pain] (DISEASE)
-#      - I am feeling [Chest pain] (DISEASE)
-#      - I am getting [Pain cramp] (DISEASE)
-#      - I am feeling [restless] (DISEASE)
-#      - I get [panic attacks] (DISEASE)
-#      - I have signs of [memory loss](DISEASE)
-#      - I am observing signs of [memory loss](DISEASE)
-#      - I have symptoms of [throat infection](DISEASE)
-#      - I am observing symptoms of [Cough Congestion](DISEASE)
-#      - My symptoms are [Cough Congestion](DISEASE) and [watery eyes](DISEASE)
-#      - Looks like I have symptoms of  [vomiting](DISEASE)
-#      - I have extreme [Fatigue] (DISEASE)
-#      - I have [blisters](DISEASE) on my hand
-#      - The [rash](DISEASE) usually appears on my trunk, arms or legs
-#      - My joints especially knees and wrists are [painful](DISEASE) and [inflamed](DISEASE).
-#      - I am getting [panic attacks](DISEASE)
-#      - My skin have [itch](DISEASE)
-#      - I have severe [pain](DISEASE) and [swelling](DISEASE) near the heel
-#      - I am a patient of [diabetes](DISEASE)
-#      - I am suffering with have prolonged heavy [bleeding](DISEASE)
-#      - Looks like I have [hair loss](DISEASE)
-#      - My skin has [rash](DISEASE)
-#      - I am [allergic](DISEASE) to insect stings and it causes me to go into [shock](DISEASE)
-#      - I am struggling with long term management of [anaphylaxis](DISEASE)
-#      - I have [stuffy nose](DISEASE)
-#      - I have a constant [pain](DISEASE) in my back
-#      - I feel a new [breast lumps](DISEASE) that persist after a menstrual period
-#      - A [pain](DISEASE) in my ankle that grows with activities
-#      - [Skin flushing](DISEASE) and [shortness of breath](DISEASE)
-#      - I feel i am having [dehydration](DISEASE)
-#
-##/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
-#
-#  - intent: goodbye
-#    examples: |
-#      - see you later!
-#      - goodbye
-#      - i'm done
-#      - quit
-#      - stop
-#      - bye
-#      - Adios
-#      - BYEE
-#      - GOODBYE
-#      - Thanks a lot. See ya later
-#      - have a good day. time to go, bye
-#      - bye bye
-#      - ok i gtg
-#      - bye bye bot
-#      - bye for now
-#      - bye udo
-#      - bye was nice talking to you
-#      - bye!
-#      - byee
-#      - catch you later
-#      - ciao
-#      - cya
-#      - farewell
-#      - good bye
-#      - good bye rasa bot!
-#      - good night
-#      - goodbye
-#      - goodbye.
-#      - goodnight
-#      - gotta go
-#      - thanks
-#      - thank you
-#      - gracias
-#      - muchas gracias
-#      - great! thanks!
-#      - thank you goodbye
-#      - okay thank you goodbye
-#      - thank you bye
-#      - um okay thank you good bye
-#      - thank you
-#      - and thats all thank you and good bye
-#      - okay thank you
-#      - thanks
-#      - thanks goodbye
-#      - thank you and good bye
-#      - Thanks!
-#      - Awesome, you are a good bot!
-#      - great!
-#      - I see, thanks
-#      - Oh thats good!
-#      - thnaks
-#      - good job bot
-#      - thanks for the help
-#      - thanks you
-#      - thanks!
-#      - thankyou
-#      - thnks
-#      - thx
-#      - thanks for your information
-#      - thankss
-#
-##/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
-#
-#  - intent: greet
-#    examples: |
-#      - yo
-#      - good morning
-#      - hi
-#      - hey there
-#      - hey,
-#      - good evening
-#      - hello
-#      - Hello?
-#      - HEY
-#      - hello are you still there
-#      - hallo
-#      - HI
-#      - Hey
-#      - Hi
-#      - hi!
-#      - hello there
-#      - hi there
-#      - Hello
-#      - hello its ella
-#      - Hola.
-#      - welcome
-#      - howdy
-#      - good day
-#
-#  - intent: healthy_patient
-#    examples: |
-#      - I am perfectly fine
-#      - I am perfect!
-#      - I am pretty well!
-#      - I am very active today
-#      - I am feeling good
-#      - pretty well
-#      - pretty well!
-#      - great
-#      - very happy!
-#      - very happy
-#      - I am good
-#      - I'm ok
-#      - it is a good day for me
-#      - Not bad
-#      - I am much better now, thank you
-#      - I am awesome
-#      - I am feeling fantastic
-#      - I am alright
-#      - Fit as a fiddle
-#      - Couldn't be better
-#      - I'm fine
-#      - I feel marvellous
-#      - I am great
-#      - The best i can be
-#      - i am so great today
-#
-#  - intent: unhealthy_patient
-#    examples: |
-#      - I am sick
-#      - I am not well
-#      - I am not so good
-#      - very ill
-#      - Not feeling well
-#      - noot feeling good
-#      - I am feeling sooo bad today
-#      - I am freaking out
-#      - it is such a bad day for me
-#      - i am very sad
-#      - i am extremely sick
-#      - I am suffering today
-#      - I am bad
-#      - sad
-#      - sick
-#      - ill
-#      - poor
-#      - I am miserable
-#
-##/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
-#
-#  - intent: bot_challenge
-#    examples: |
-#      - are you a bot?
-#      - am i speaking to an ai?
-#      - are you a human or a bot?
-#      - are you real?
-#      - are you virtual?
-#      - are you an ai?
-#      - aren't you a bot
-#      - are you a chatbot
-#      - are you a rasa bot?
-#      - are you a real bot?
-#      - are you a robot
-#      - are you ai
-#      - are you artificial
-#      - are you artificial intelligence
-#      - are you real
-#      - are you really a bot
-#      - are you robot
-#      - are you sure that you're a bot?
-#      - bot?
-#      - who are you?
-#      - what you do?
-#      - how can you help?
-#
-##/* The code below was adapted from Rasa Financial Demo at https://github.com/RasaHQ/financial-demo (last accessed 26-08-2022) */
-#
-#  - intent: out_of_scope
-#    examples: |
-#      - I want to order food
-#      - What is 2 + 2?
-#      - Who's the US President?
-#      - lhfjdkwhnf
-#      - a b c d d e f
-#      - bla bla bla
-#      - Do you know how to dance?
-#      - what is the square root of 5
-#      - I want to know the weather
-#      - what is the meaning of life.
-#      - Fridge Isn't Running
-#      - my tv isn't working
-#      - I want a pizza
-#      - my washing machine isn't working
-#      - what year is it
-#      - order a banana
-#      - I want to order a pizza
-#      - what is the weather today
-#      - what the weather today ?
-#      - hows the weather
-#      - tell me a joke
-#      - Can I get a hamburger?
-#      - Can YouTube talk?
-#      - Can you call me back ?
-#      - Can you give me your datacenter's password
-#      - Can you give me your datacenter's password?
-#      - Can you make sandwiches?
-#      - Can you please send me an uber
-#      - ofif fsdfafsfs
-#      - ewfn rwtot43uf 345653tf 314efyj f ewu
+  - intent: unhealthy_patient
+    examples: |
+      - I am suffering today
+      - sick
+      - Not feeling well
+      - I am sick
+      - I am feeling sooo bad today
+      - i am extremely sick
+      - sad
+      - I am not well
+      - I am miserable
+      - very ill
+      - I am not so good
+      - it is such a bad day for me
+      - I am freaking out
+      - I am bad
+  - intent: bot_challenge
+    examples: |
+      - are you a rasa bot?
+      - bot?
+      - are you a robot
+      - am i speaking to an ai?
+      - are you a bot?
+      - are you a chatbot
+      - are you artificial
+      - are you real?
+      - are you artificial intelligence
+      - are you a human or a bot?
+      - are you ai
+      - aren't you a bot
+      - are you an ai?
+      - are you really a bot
+      - are you a real bot?
+      - who are you?
+      - are you virtual?
+      - are you robot
+  - intent: greet
+    examples: |
+      - hello are you still there
+      - welcome
+      - good evening
+      - good day
+      - Hello?
+      - Hey
+      - good morning
+      - hi!
+      - HI
+      - hi
+      - hey there
+      - Hola.
+      - howdy
+      - hello there
+      - Hello
+      - HEY
+      - hey,
+      - hi there
+  - intent: healthy_patient
+    examples: |
+      - Couldn't be better
+      - I am perfect!
+      - Fit as a fiddle
+      - pretty well!
+      - I am much better now, thank you
+      - it is a good day for me
+      - i am so great today
+      - I am feeling good
+      - I'm fine
+      - I am great
+      - I am very active today
+      - I'm ok
+      - Not bad
+      - pretty well
+      - I am pretty well!
+      - I am perfectly fine
+      - I feel marvellous
+      - I am awesome
+      - very happy!
+      - I am good
+  - intent: out_of_scope
+    examples: |
+      - a b c d d e f
+      - hows the weather
+      - Can I get a hamburger?
+      - my washing machine isn't working
+      - Can YouTube talk?
+      - I want to know the weather
+      - I want to order food
+      - Who's the US President?
+      - Can you give me your datacenter's password?
+      - my tv isn't working
+      - what year is it
+      - I want to order a pizza
+      - Can you call me back ?
+      - what is the weather today
+      - Fridge Isn't Running
+      - Can you give me your datacenter's password
+      - tell me a joke
+      - order a banana
+      - what is the square root of 5
+      - ewfn rwtot43uf 345653tf 314efyj f ewu
+      - Can you please send me an uber
+      - What is 2 + 2?
+      - what is the meaning of life.
+      - Do you know how to dance?
+  - intent: inform_symptoms
+    examples: |
+      - [headache](DISEASE)
+      - My symptoms are [Cough Congestion](DISEASE) and [watery eyes](DISEASE)
+      - I have severe [pain](DISEASE) and [swelling](DISEASE) near the heel
+      - It looks like I have [stomachache](DISEASE)
+      - I am struggling with long term management of [anaphylaxis](DISEASE)
+      - I am getting [Pain cramp] (DISEASE)
+      - I have a constant [pain](DISEASE) in my back
+      - I feel i am having [dehydration](DISEASE)
+      - I am observing [Chest pain] (DISEASE)
+      - Looks like I have [hair loss](DISEASE)
+      - I have extreme [Fatigue] (DISEASE)
+      - I am feeling [restless] (DISEASE)
+      - I am observing signs of [memory loss](DISEASE)
+      - [Skin flushing](DISEASE) and [shortness of breath](DISEASE)
+      - I am suffering with have prolonged heavy [bleeding](DISEASE)
+      - Seems like I have [anemia](DISEASE)
+      - I am observing symptoms of [Cough Congestion](DISEASE)
+      - joints are [painful](DISEASE) and [inflamed](DISEASE).
+      - I get [panic attacks] (DISEASE)
+      - Looks like I have symptoms of  [vomiting](DISEASE)
+      - It appears like I have [anemia](DISEASE)
+      - A [pain](DISEASE) in my ankle that grows with activities
+      - I am a patient of [diabetes](DISEASE)
+      - [Dizziness](DISEASE) or [lightheadedness](DISEASE)
+      - I have [blisters](DISEASE) on my hand
+      - I am feeling [Chest pain] (DISEASE)
+      - [painful](DISEASE) and [inflamed](DISEASE) joints
+      - I am getting [panic attacks](DISEASE)
+      - My skin have [itch](DISEASE)
+      - I have symptoms of [throat infection](DISEASE)
+      - My skin has [rash](DISEASE)
+  - intent: goodbye
+    examples: |
+      - thank you
+      - thanks goodbye
+      - bye!
+      - ciao
+      - bye bye
+      - BYEE
+      - Thanks!
+      - bye
+      - byee
+      - stop
+      - gracias
+      - catch you later
+      - thnks
+      - okay thank you
+      - great!
+      - Oh thats good!
+      - thanks you
+      - Awesome, you are a good bot!
+      - thank you and good bye
+      - thx
+      - Adios
+      - have a good day. time to go, bye
+      - see you later!
+      - thankyou
+      - goodnight
+      - thanks for your information
+      - thanks!
+      - gotta go
+      - great! thanks!
+      - I see, thanks
+      - i'm done
+      - good bye rasa bot!
+      - um okay thank you good bye
+      - bye for now
+      - muchas gracias
+      - thank you goodbye
+      - okay thank you goodbye
+      - ok i gtg
+      - goodbye
+      - good bye
+      - GOODBYE
+      - thank you bye
+      - farewell
+      - thankss
+      - quit
+      - good night

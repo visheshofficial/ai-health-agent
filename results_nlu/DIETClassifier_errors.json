@@ -1,0 +1,95 @@
+[
+  {
+    "text": "I have stuffy nose",
+    "entities": [
+      {
+        "start": 7,
+        "end": 18,
+        "value": "stuffy nose",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have signs of memory loss",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "memory loss",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "DISEASE",
+        "start": 16,
+        "end": 22,
+        "confidence_entity": 0.5163439512252808,
+        "value": "memory",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am allergic to insect stings and it causes me to go into shock",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "allergic",
+        "entity": "DISEASE"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "shock",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "My joints especially knees and wrists are painful and inflamed.",
+    "entities": [
+      {
+        "start": 42,
+        "end": 49,
+        "value": "painful",
+        "entity": "DISEASE"
+      },
+      {
+        "start": 54,
+        "end": 62,
+        "value": "inflamed",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "The rash usually appears on my trunk, arms or legs",
+    "entities": [
+      {
+        "start": 4,
+        "end": 8,
+        "value": "rash",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I feel a new breast lumps that persist after a menstrual period",
+    "entities": [
+      {
+        "start": 13,
+        "end": 25,
+        "value": "breast lumps",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "text": "noot feeling good",
+    "intent": "unhealthy_patient",
+    "intent_prediction": {
+      "name": "healthy_patient",
+      "confidence": 0.6894241571426392
+    }
+  },
+  {
+    "text": "how can you help?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.7897530794143677
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9025306105613708
+    }
+  },
+  {
+    "text": "bla bla bla",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9810907244682312
+    }
+  }
+]

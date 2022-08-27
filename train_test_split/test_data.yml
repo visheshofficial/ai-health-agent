@@ -1,0 +1,59 @@
+version: "3.1"
+nlu:
+- intent: unhealthy_patient
+  examples: |
+    - ill
+    - noot feeling good
+    - poor
+    - i am very sad
+- intent: bot_challenge
+  examples: |
+    - what you do?
+    - are you sure that you're a bot?
+    - how can you help?
+    - are you real
+- intent: greet
+  examples: |
+    - hallo
+    - hello
+    - yo
+    - Hi
+    - hello its ella
+- intent: healthy_patient
+  examples: |
+    - I am alright
+    - very happy
+    - I am feeling fantastic
+    - great
+    - The best i can be
+- intent: out_of_scope
+  examples: |
+    - ofif fsdfafsfs
+    - Can you make sandwiches?
+    - bla bla bla
+    - I want a pizza
+    - lhfjdkwhnf
+    - what the weather today ?
+- intent: inform_symptoms
+  examples: |
+    - I have [stuffy nose](DISEASE)
+    - I have signs of [memory loss](DISEASE)
+    - I am [allergic](DISEASE) to insect stings and it causes me to go into [shock](DISEASE)
+    - My joints especially knees and wrists are [painful](DISEASE) and [inflamed](DISEASE).
+    - I feel [dizziness](DISEASE)
+    - The [rash](DISEASE) usually appears on my trunk, arms or legs
+    - I feel a new [breast lumps](DISEASE) that persist after a menstrual period
+    - I have [headache](DISEASE)
+- intent: goodbye
+  examples: |
+    - goodbye.
+    - good job bot
+    - Thanks a lot. See ya later
+    - cya
+    - thanks
+    - bye was nice talking to you
+    - thanks for the help
+    - bye udo
+    - and thats all thank you and good bye
+    - thnaks
+    - bye bye bot

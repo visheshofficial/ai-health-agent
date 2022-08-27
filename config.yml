@@ -48,6 +48,3 @@ policies:
     constrain_similarities: true
     tensorboard_log_directory: "./tensorboard"
     tensorboard_log_level: "epoch"
-#  - name: UnexpecTEDIntentPolicy
-#    max_history: 5
-#    epochs: 100

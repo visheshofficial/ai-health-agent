@@ -1,0 +1,44 @@
+[
+  {
+    "text": "I am observing symptoms of Cough Congestion",
+    "entities": [
+      {
+        "start": 27,
+        "end": 43,
+        "value": "Cough Congestion",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "DISEASE",
+        "start": 27,
+        "end": 32,
+        "confidence_entity": 0.6929314136505127,
+        "value": "Cough",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am getting panic attacks",
+    "entities": [
+      {
+        "start": 13,
+        "end": 26,
+        "value": "panic attacks",
+        "entity": "DISEASE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "DISEASE",
+        "start": 13,
+        "end": 18,
+        "confidence_entity": 0.5786429047584534,
+        "value": "panic",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
